@@ -1,5 +1,5 @@
 .Pizzas-menu{
-	height: 100%;
+	height: 100vh;
 	overflow-y: scroll;
 	background-color: grey;
 	text-align: center;
@@ -10,6 +10,7 @@
 }
 
 .Select-pizza{
+	margin-top: 50px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
