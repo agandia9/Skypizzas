@@ -7,8 +7,20 @@ class MenuPizzas extends Component {
 		super()
 		this.state = {
 			yourSelection:[],
-			pizzas: [{name:'Pizza 1', ingredientes:['ing1','ing2','ing3'], image:'https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f355.svg'}, {name:'Pizza 2', ingredientes:['ing1','ing2','ing3'], image:'https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f355.svg'}, {name:'Pizza 3', ingredientes:['ing1','ing2','ing3'], image:'https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f355.svg'}, {name:'Pizza 4', ingredientes:['ing1','ing2','ing3'], image:'https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f355.svg'}]
+			pizzas: []
 		}
+	}
+
+	componentWillMount(){
+		fetch('http://192.168.0.11:8080/pizzas').then(res => res.json())
+		.then(res => {
+			console.log(res)
+			this.setState({
+				pizzas:res.data
+			})
+		})
+
+		
 	}
 	vote = () =>{
 		console.log('vote!')
@@ -27,7 +39,7 @@ class MenuPizzas extends Component {
 					<PizzaCard 
 						key={index}
 						name={pizza.name}
-						ingredientes={pizza.ingredientes}
+						ingredients={pizza.ingredients}
 						image={pizza.image}
 						vote={this.vote}
 					/>)
