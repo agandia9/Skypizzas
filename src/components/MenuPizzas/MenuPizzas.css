@@ -1,0 +1,46 @@
+.Pizzas-menu{
+	padding-top: 50px;
+	height: 100vh;
+	overflow-y: scroll;
+	background-color: grey;
+	text-align: center;
+}
+
+.Pizzas-menu h3{
+	margin:0;
+}
+
+.Select-pizza{
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+input{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid lightgrey;
+    /* margin-top: 1px; */
+    padding-bottom: 0px;
+    font-size: 30px;
+    text-align: center; 
+}
+
+form button{
+	margin-top: 10px;
+	background-color: #727272;
+	font-size: 20px;
+	width: 100%;
+	bottom: 0;
+	height: 50px;
+	
+	margin:0;
+	border:0;
+}
+
+form button:active{
+	background-color: #727272;
+	border:0;
+}
