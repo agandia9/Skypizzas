@@ -5,7 +5,9 @@ const cheerio = require ('cheerio')
 
 const app = express()
 
-app.get('/scrape',function(req, res){
+app.use(require('./cors'))
+
+app.get('/pizzas',function(req, res){
     
     const url = 'https://www.dominospizza.es/carta-de-pizzas'
     try {
@@ -25,24 +27,24 @@ app.get('/scrape',function(req, res){
                         pizzasRaw.push(item.children[3].children[0].data)
                     })
                     $(this).find('img').filter(function(index,item){
-                        pizzasRaw.push(item.attribs.src.substring(2))
+                        pizzasRaw.push('http:' + item.attribs.src)
                     })
                 })
             })
             for(let i=0; i<pizzasRaw.length; i+=3){
-                pizzasFiltered.push({
-                    name: pizzasRaw[i],
-                    ingredients: pizzasRaw[i+1],
-                    image: pizzasRaw[i+2],
-                })
+                if(pizzasRaw[i].toLowerCase() !== "margarita" && pizzasRaw[i].toLowerCase() !== "elige por mitades"){
+                    pizzasFiltered.push({
+                        name: pizzasRaw[i],
+                        ingredients: pizzasRaw[i+1],
+                        image: pizzasRaw[i+2]
+                    })
+                }
             }
-            fs.writeFile('output.json', JSON.stringify(pizzasFiltered, null, 4), function(err){
-
-                console.log('File successfully written! - Check your project directory for the output.json file');
-            
+            res.json({
+                status: 'OK',
+                message: 'Pizzas scrapped successfully',
+                data:  pizzasFiltered
             })
-        
-            res.send('Check your console!')
             
         })    
     } catch (e) {
@@ -52,6 +54,6 @@ app.get('/scrape',function(req, res){
 
 app.listen('8080')
 
-console.log('Magic on port 8080')
+console.log('Up on port 8080')
 
 exports= module.exports = app
