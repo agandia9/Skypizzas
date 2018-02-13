@@ -8,10 +8,13 @@
 .App-header {
   
   background-color: #222;
-  height: 150px;
+  height: 250px;
   color: white; 
+  font-size: 40px;
 }
+.App-header{
 
+}
 .App-title {
   font-size: 1.5em;
   margin-top: 0;
@@ -20,7 +23,9 @@
 }
 
 .App-intro {
-  font-size: large;
+  font-size: 25px;
   color: white; 
 }
+
+
 

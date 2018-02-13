@@ -5,7 +5,10 @@ class PizzaCard extends Component {
   render() {
 	return (
 	<div className="thumbnail">
-		<p>:(</p>
+		<h3>{this.props.name}</h3>
+		<p>{this.props.ingredientes}</p>
+		<img src={this.props.image} alt="pizza"/>
+		<button onClick={this.props.vote}>Vote for me!</button>
 	</div>
 	);
   }

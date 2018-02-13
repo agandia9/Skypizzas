@@ -1,7 +1,38 @@
 .thumbnail{
-	 border: 1px solid #ddd; /* Gray border */
-    border-radius: 4px;  /* Rounded border */
-    padding: 5px; /* Some padding */
-    width: 150px; /* Set a small width */
-    height: 200px;
+	-webkit-box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
+-moz-box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
+box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
+    background-color: #8e8e8e;
+    padding: 25px; /* Some padding */
+    width: 250px; /* Set a small width */
+    height: 300px;
+}
+
+.thumbnail:hover{
+	background-color: #727272;
+    -webkit-transition: background-color 800ms linear;
+    -ms-transition: background-color 800ms linear;
+    transition: background-color 800ms linear;
+}
+
+.thumbnail button{
+	margin-top: 10px;
+	background-color: #727272;
+	font-size: 20px;
+	width: 100%;
+	bottom: 0;
+	height: 50px;
+	
+	margin:0;
+	border:0;
+}
+
+.thumbnail button:active{
+	background-color: #727272;
+	border:0;
+}
+
+.thumbnail img{
+	max-width: 70%;
+    max-height: 70%;
 }
