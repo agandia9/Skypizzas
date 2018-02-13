@@ -35,10 +35,7 @@ class MenuPizzas extends Component {
 		<input type="text" placeholder="Filter ur pizza"/>
 		<div className="Select-pizza">
 		{
-
-		}
-		{
-			 this.state.loading ? <h3> Loading...</h3> :
+			 this.state.loading ? <h3 className="loading"> Loading...</h3> :
 			 
 			 
 			 	this.state.pizzas.map((pizza, index)=>{
