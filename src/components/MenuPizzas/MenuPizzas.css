@@ -1,5 +1,5 @@
 .Pizzas-menu{
-	padding-top: 50px;
+	padding-top: 25px;
 	height: 100vh;
 	overflow-y: scroll;
 	background-color: grey;
@@ -15,6 +15,14 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+}
+
+h3{
+	font-size: 30px;
+}
+
+h4{
+	font-size: 20px;
 }
 
 input{

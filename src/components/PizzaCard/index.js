@@ -6,8 +6,8 @@ class PizzaCard extends Component {
 	return (
 	<div className="thumbnail">
 		<h3>{this.props.name}</h3>
-		<p>{this.props.ingredientes}</p>
-		<img src={this.props.image} alt="pizza"/>
+		<p>{this.props.ingredients}</p>
+		<img src={'http://' + this.props.image} alt="pizza"/>
 		<button onClick={this.props.vote}>Vote for me!</button>
 	</div>
 	);
