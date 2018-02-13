@@ -1,0 +1,16 @@
+.Pizzas-menu{
+	height: 100%;
+	overflow-y: scroll;
+	background-color: grey;
+	text-align: center;
+}
+
+.Pizzas-menu h3{
+	margin:0;
+}
+
+.Select-pizza{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
