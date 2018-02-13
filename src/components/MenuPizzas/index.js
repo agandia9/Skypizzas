@@ -7,16 +7,17 @@ class MenuPizzas extends Component {
 		super()
 		this.state = {
 			yourSelection:[],
-			pizzas: []
+			pizzas: [],
+			loading:true
 		}
 	}
 
 	componentWillMount(){
 		fetch('http://192.168.0.11:8080/pizzas').then(res => res.json())
 		.then(res => {
-			console.log(res)
 			this.setState({
-				pizzas:res.data
+				pizzas:res.data,
+				loading: false
 			})
 		})
 
@@ -34,7 +35,13 @@ class MenuPizzas extends Component {
 		<input type="text" placeholder="Filter ur pizza"/>
 		<div className="Select-pizza">
 		{
-			this.state.pizzas.map((pizza, index)=>{
+
+		}
+		{
+			 this.state.loading ? <h3> Loading...</h3> :
+			 
+			 
+			 	this.state.pizzas.map((pizza, index)=>{
 				return (
 					<PizzaCard 
 						key={index}
@@ -45,7 +52,8 @@ class MenuPizzas extends Component {
 					/>)
 						}
 					)
-		}
+		
+	}
 		</div>
 		<form>
 			<h2>Your selection</h2>
