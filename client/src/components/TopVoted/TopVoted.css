@@ -1,0 +1,8 @@
+.TopVoted-menu{
+	padding-top: 25px;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #e5cc87;
+    text-align: center;
+    margin-top: 250px;
+}
