@@ -1,8 +1,8 @@
 .thumbnail{
 	-webkit-box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
--moz-box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
-box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
-    background-color: #8e8e8e;
+	-moz-box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
+	box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
+    background-color: #c6ab67;
     margin-bottom: 20px;
     padding: 25px; /* Some padding */
     width: 250px; /* Set a small width */
@@ -11,7 +11,7 @@ box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
 }
 
 .thumbnail:hover{
-	background-color: #727272;
+	background-color: #b2995b;
     -webkit-transition: background-color 800ms linear;
     -ms-transition: background-color 800ms linear;
     transition: background-color 800ms linear;
@@ -19,7 +19,7 @@ box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
 
 .thumbnail button{
 	margin-top: 10px;
-	background-color: #727272;
+	background-color: #ba9b4c;
 	font-size: 20px;
 	width: 100%;
 	height: 50px;
@@ -28,7 +28,7 @@ box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
 }
 
 .thumbnail button:active{
-	background-color: #8e8e8e;
+	background-color: #b2995b;
 	border:0;
 	-webkit-transition: background-color 800ms linear;
     -ms-transition: background-color 800ms linear;

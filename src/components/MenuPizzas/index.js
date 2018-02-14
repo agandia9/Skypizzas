@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './MenuPizzas.css';
 import PizzaCard from '../PizzaCard'
+import swal from 'sweetalert'
+
 
 class MenuPizzas extends Component {
 	constructor(){
@@ -8,7 +10,8 @@ class MenuPizzas extends Component {
 		this.state = {
 			yourSelection:[],
 			pizzas: [],
-			loading:true
+			loading:true,
+			name:''
 		}
 	}
 	componentWillMount(){
@@ -29,10 +32,10 @@ class MenuPizzas extends Component {
 				yourSelection:this.state.yourSelection.concat(pizzaVoted)
 			})
 		}
+		swal ("Pizza Added!" ,  "" ,  "success" )
 	}
 
 	deleteSelection =(e)=>{
-		
 				let pizzaToDelete = e.target.getAttribute('data')
 				this.setState({
 					yourSelection: this.state.yourSelection.filter((name)=>{
@@ -41,6 +44,34 @@ class MenuPizzas extends Component {
 				})
 			
 	}
+
+	pushUpvotes = (e) => {
+		e.preventDefault()
+		if(this.state.yourSelection.length === 0){
+			swal ( "Error ocurred in Democracy.exe" ,  "I will apply 155 article to u. 🤬" ,  "error" )
+		}
+		else{
+				swal({
+					title:'One step more, ur name?',
+						content: {
+						element: "input",
+						attributes: {
+						  placeholder: "Type your name"
+						}
+					  },
+
+				}).then((value)=>{
+					this.setState({
+						name:value
+					})
+				});
+				this.setState({
+					yourSelection:[]
+				})
+			}
+
+	}
+
   render() {
 	return (
 	<div className="Pizzas-menu">
@@ -53,7 +84,7 @@ class MenuPizzas extends Component {
 			 this.state.loading ? <h3 className="loading"> Loading...</h3> :
 			 
 			 
-			 	this.state.pizzas.map((pizza, index)=>{
+				this.state.pizzas.map((pizza, index)=>{
 				return (
 					<PizzaCard 
 						key={index}
@@ -67,7 +98,7 @@ class MenuPizzas extends Component {
 	}
 		</div>
 		<form>
-			<h2>Your selection</h2>
+			<h1>Your selection</h1>
 			<ul>
 				{
 					this.state.yourSelection.map((pizza, index)=>{
@@ -77,7 +108,7 @@ class MenuPizzas extends Component {
 					})
 				}
 			</ul>
-			<button className="Submit-votes">Submit your votes!</button>
+			<button onClick={this.pushUpvotes} className="Submit-votes">Submit your votes!</button>
 		</form>
 	</div>
 	);

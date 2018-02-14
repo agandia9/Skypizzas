@@ -2,7 +2,7 @@
 	padding-top: 25px;
     height: 100%;
     overflow-y: scroll;
-    background-color: grey;
+    background-color: #e5cc87;
     text-align: center;
     margin-top: 250px;
 }
@@ -30,11 +30,15 @@ h4{
 	font-size: 20px;
 }
 
+.swal-overlay {
+  background-color: rgba(130, 108, 48, 0.45);
+}
+
 input{
     width: 100%;
     background-color: transparent;
     border: 0;
-    border-bottom: 3px solid lightgrey;
+    border-bottom: 3px solid #826829;
     /* margin-top: 1px; */
     padding-bottom: 0px;
     font-size: 30px;
@@ -56,4 +60,9 @@ form button{
 form button:active{
 	background-color: #727272;
 	border:0;
+}
+
+ul li{
+	font-size: 20px;
+	list-style: none;
 }
