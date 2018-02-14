@@ -11,7 +11,6 @@ class MenuPizzas extends Component {
 			loading:true
 		}
 	}
-
 	componentWillMount(){
 		fetch('http://192.168.0.11:8080/pizzas').then(res => res.json())
 		.then(res => {
@@ -20,25 +19,27 @@ class MenuPizzas extends Component {
 				loading: false
 			})
 		})
-
-		
 	}
 	vote = (e) =>{
-		let pizzaVoted = e.target.getAttribute('data')
-		this.setState({
-			yourSelection:this.state.yourSelection.concat(pizzaVoted)
-		})
+		if(this.state.yourSelection.length > 2){
+			return 'u focking idiot.'
+		}else{
+			let pizzaVoted = e.target.getAttribute('data')
+			this.setState({
+				yourSelection:this.state.yourSelection.concat(pizzaVoted)
+			})
+		}
 	}
 
 	deleteSelection =(e)=>{
-		let pizzaToDelete = e.target.getAttribute('data')
-		this.setState({
-			yourSelection: this.state.yourSelection.filter((name)=>{
-				return name !== pizzaToDelete
-			})
-
-		})
-		console.log(this.state)
+		
+				let pizzaToDelete = e.target.getAttribute('data')
+				this.setState({
+					yourSelection: this.state.yourSelection.filter((name)=>{
+						return name !== pizzaToDelete
+					})
+				})
+			
 	}
   render() {
 	return (
@@ -71,7 +72,7 @@ class MenuPizzas extends Component {
 				{
 					this.state.yourSelection.map((pizza, index)=>{
 						return(
-						<li key={index}> {pizza}<span data={pizza} onClick={this.deleteSelection}>❌</span></li>
+						<li key={index}> {pizza}<span role="img"  data={pizza} onClick={this.deleteSelection}>❌</span></li>
 						)
 					})
 				}
