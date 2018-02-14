@@ -70,15 +70,16 @@ class MenuPizzas extends Component {
 					console.log(data)
 
 					fetch('http://192.168.0.11:8080/votes',{
-					    method: "post",
-					    body: data,
-					    headers: {
-					      'content-type': 'application/json'
-					    }
+						method: "post",
+						body: data,
+						headers: {
+							'content-type': 'application/json'
+						}
 					}).then((res)=>{
 						return res.json()
 					}).then((res)=>{
 						console.log(res)
+						swal('U voted correctly 🤩','Wait for PETA time!', 'success')
 					})
 					
 					// for get votes!
