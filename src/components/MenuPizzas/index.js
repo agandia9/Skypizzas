@@ -64,10 +64,41 @@ class MenuPizzas extends Component {
 					this.setState({
 						name:value
 					})
-				});
-				this.setState({
-					yourSelection:[]
-				})
+				}).then(()=>{
+					var obj = {name: this.state.name, vote1:this.state.yourSelection[0], vote2:this.state.yourSelection[1], vote3:this.state.yourSelection[2]}
+					var data = JSON.stringify(obj)
+					console.log(data)
+
+					fetch('http://192.168.0.11:8080/votes',{
+					    method: "post",
+					    body: data,
+					    headers: {
+					      'content-type': 'application/json'
+					    }
+					}).then((res)=>{
+						return res.json()
+					}).then((res)=>{
+						console.log(res)
+					})
+					
+					// for get votes!
+					// fetch('http://192.168.0.11:8080/votes',{
+					//     method: "GET",
+					//     body: obj
+					// }).then((res)=>{
+					// 	return res.json()
+					// }).then((res)=>{
+					// 	console.log(res)
+					// })
+
+
+				}).then(()=>{  
+						this.setState({
+							yourSelection:[]
+						})
+					})
+				
+				
 			}
 
 	}
