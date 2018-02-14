@@ -7,6 +7,7 @@ box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
     padding: 25px; /* Some padding */
     width: 250px; /* Set a small width */
     max-height: 500px;
+
 }
 
 .thumbnail:hover{
@@ -21,16 +22,17 @@ box-shadow: 5px 5px 0px 5px rgba(0,0,0,1);
 	background-color: #727272;
 	font-size: 20px;
 	width: 100%;
-	bottom: 0;
 	height: 50px;
-	
 	margin:0;
 	border:0;
 }
 
 .thumbnail button:active{
-	background-color: #727272;
+	background-color: #8e8e8e;
 	border:0;
+	-webkit-transition: background-color 800ms linear;
+    -ms-transition: background-color 800ms linear;
+    transition: background-color 800ms linear;
 }
 
 .thumbnail img{

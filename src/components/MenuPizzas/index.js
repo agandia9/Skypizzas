@@ -23,8 +23,22 @@ class MenuPizzas extends Component {
 
 		
 	}
-	vote = () =>{
-		console.log('vote!')
+	vote = (e) =>{
+		let pizzaVoted = e.target.getAttribute('data')
+		this.setState({
+			yourSelection:this.state.yourSelection.concat(pizzaVoted)
+		})
+	}
+
+	deleteSelection =(e)=>{
+		let pizzaToDelete = e.target.getAttribute('data')
+		this.setState({
+			yourSelection: this.state.yourSelection.filter((name)=>{
+				return name !== pizzaToDelete
+			})
+
+		})
+		console.log(this.state)
 	}
   render() {
 	return (
@@ -49,16 +63,15 @@ class MenuPizzas extends Component {
 					/>)
 						}
 					)
-		
 	}
 		</div>
 		<form>
 			<h2>Your selection</h2>
 			<ul>
 				{
-					this.state.yourSelection.map((pizza)=>{
+					this.state.yourSelection.map((pizza, index)=>{
 						return(
-						<li>{pizza.name}</li>
+						<li key={index}> {pizza}<span data={pizza} onClick={this.deleteSelection}>❌</span></li>
 						)
 					})
 				}
