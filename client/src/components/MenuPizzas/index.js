@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './MenuPizzas.css';
+import { Link } from 'react-router-dom'
+
 import PizzaCard from '../PizzaCard'
 import swal from 'sweetalert'
 
@@ -80,6 +82,8 @@ class MenuPizzas extends Component {
 					}).then((res)=>{
 						console.log(res)
 						swal('U voted correctly 🤩','Wait for PETA time!', 'success')
+					}).catch((err)=>{
+						return err
 					})
 					
 					// for get votes!
@@ -142,6 +146,7 @@ class MenuPizzas extends Component {
 			</ul>
 			<button onClick={this.pushUpvotes} className="Submit-votes">Submit your votes!</button>
 		</form>
+		<Link to='/topvoted'>Top Voted</Link>
 	</div>
 	);
   }
