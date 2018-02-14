@@ -34,6 +34,7 @@ class TopVoted extends Component {
 					return <p>{pizza.name} - {pizza.quantity}</p>
 				})
 			}
+			
 			<Link to='/'>Home</Link>
 		</div>
 		);
