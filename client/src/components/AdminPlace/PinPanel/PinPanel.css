@@ -1,0 +1,6 @@
+.container-pin-panel{
+    display: flex;
+}
+.container-pin-panel button{
+    border-radius: 25px;
+}

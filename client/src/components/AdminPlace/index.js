@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert'
+import PinPanel from './PinPanel'
 
 class AdminPlace extends Component{
     constructor(){
@@ -46,6 +47,7 @@ class AdminPlace extends Component{
         return(
             <div className="Pizzas-menu">
                 <h1>Admin Area</h1>
+                <PinPanel />
                 <input type="password" placeholder="Enter pin" onChange={this.changePin}/>
                 <button onClick={this.checkPin}>Check</button>
                 {(this.state.showPanel) ? 
