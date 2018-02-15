@@ -15,9 +15,8 @@ class AdminPlace extends Component{
         const pin = e.target.value
         this.setState({pin})
     }
-    checkPin = (e) =>{
-        e.preventDefault()
-        var obj = {pin: this.state.pin}
+    checkPin = (pin) =>{
+        var obj = {pin}
         var data = JSON.stringify(obj)
         fetch('http://192.168.0.11:8080/admin/pin',{
 						method: "post",
@@ -29,6 +28,7 @@ class AdminPlace extends Component{
                 .then(res=>{
                     return res.json()
                 }).then(res=>{
+                    console.log(res)
                     if(res.status ==='OK'){
                         this.setState({showPanel: true})
                     }
@@ -46,10 +46,8 @@ class AdminPlace extends Component{
     render(){
         return(
             <div className="Pizzas-menu">
-                <h1>Admin Area</h1>
-                <PinPanel />
-                <input type="password" placeholder="Enter pin" onChange={this.changePin}/>
-                <button onClick={this.checkPin}>Check</button>
+                <h1 onClick={this.countUp}>Admin Area</h1>
+                <PinPanel checkPin={this.checkPin}/>
                 {(this.state.showPanel) ? 
                 <button onClick={this.resetVotes}>Reset Votes</button>
                 :
