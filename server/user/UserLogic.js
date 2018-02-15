@@ -13,6 +13,13 @@ class UserLogic{
             resolve('ok')
         })
     }
+    changeVoteToTrue(name){
+        const _name = name.toLowerCase()
+        userData.changeVoteToTrue(_name)
+    }
+    resetVotes(){
+        return userData.resetVotes()
+    }
 }
 
 module.exports = UserLogic
