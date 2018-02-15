@@ -46,7 +46,7 @@ class AdminPlace extends Component{
     render(){
         return(
             <div className="Pizzas-menu">
-                <h1 onClick={this.countUp}>Admin Area</h1>
+                <h1>Admin Area</h1>
                 <PinPanel checkPin={this.checkPin}/>
                 {(this.state.showPanel) ? 
                 <button onClick={this.resetVotes}>Reset Votes</button>
