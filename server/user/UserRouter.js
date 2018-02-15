@@ -1,17 +1,16 @@
 const express = require('express')
-const voteRouter = express.Router()
+const userRouter = express.Router()
 
-const voteLogic = new(require('./VoteLogic'))
+const userLogic = new(require('./UserLogic'))
 
-
-voteRouter.route('/')
+userRouter.route('/')
     .get((req,res)=>{
-        voteLogic.listVotes()
-            .then(votes=>{
+        userLogic.listUsers()
+            .then(users=>{
                 res.json({
                     status: 'OK',
-                    message: 'Votes listed successfully',
-                    data: votes
+                    message: 'Users listed successfully',
+                    data: users
                 })
             })
             .catch(err=>{
@@ -22,13 +21,13 @@ voteRouter.route('/')
             })
     })
     .post((req,res)=>{
-        const {name, vote1, vote2, vote3} = req.body 
-        voteLogic.addVote(name, vote1, vote2, vote3)
-            .then(vote=>{
+        const {names} = req.body 
+        userLogic.addUsers(names)
+            .then(user=>{
                 res.json({
                     status: 'OK',
-                    message: 'Vote created successfully',
-                    data: vote
+                    message: 'Users created successfully',
+                    data: user
                 })
             })
             .catch(err=>{
@@ -39,4 +38,4 @@ voteRouter.route('/')
             })
     })
 
-module.exports = voteRouter
+module.exports = userRouter
