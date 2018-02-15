@@ -10,8 +10,6 @@ class TopVoted extends Component {
 		}
 	}
 	componentWillMount(){
-
-		//console.log('hi from top voted!')
 		fetch('http://192.168.0.11:8080/votes').then(res => res.json())
 		.then(res => {
 			const result = Object.keys(res.data).map(function(key) {
