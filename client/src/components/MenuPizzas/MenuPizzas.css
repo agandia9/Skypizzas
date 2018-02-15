@@ -66,3 +66,11 @@ ul li{
 	font-size: 20px;
 	list-style: none;
 }
+
+a{
+	
+	margin-bottom: 50px;
+
+	font-size: 20px;
+	text-decoration: none;
+}
