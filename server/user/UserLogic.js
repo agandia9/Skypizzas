@@ -18,7 +18,7 @@ class UserLogic{
         userData.changeVoteToTrue(_name)
     }
     resetVotes(){
-        return userData.resetVotes()
+        userData.resetVotes()
     }
 }
 

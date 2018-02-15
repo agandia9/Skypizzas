@@ -29,6 +29,13 @@ class VoteData{
                 .catch(reject)
         })  
     }
+    resetVotes(){
+        return new Promise((resolve, reject) => {
+            Vote.remove({})
+                .then(resolve)
+                .catch(reject)
+        })
+    }
 }
 
 module.exports = VoteData

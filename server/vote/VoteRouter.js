@@ -39,4 +39,22 @@ voteRouter.route('/')
             })
     })
 
+voteRouter.route('/reset')
+    .get((req,res)=>{
+        voteLogic.resetVotes()
+            .then(votes=>{
+                res.json({
+                    status: 'OK',
+                    message: 'Users votes reset successfully',
+                    data: votes
+                })
+            })
+            .catch(err=>{
+                res.json({
+                    status: 'KO',
+                    message: err.message
+                })
+            })
+    })
+
 module.exports = voteRouter

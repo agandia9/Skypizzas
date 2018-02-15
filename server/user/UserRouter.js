@@ -37,22 +37,5 @@ userRouter.route('/')
                 })
             })
     })
-userRouter.route('/reset')
-    .get((req,res)=>{
-        userLogic.resetVotes()
-            .then(users=>{
-                res.json({
-                    status: 'OK',
-                    message: 'Users votes reset to false successfully',
-                    data: users
-                })
-            })
-            .catch(err=>{
-                res.json({
-                    status: 'KO',
-                    message: err.message
-                })
-            })
-    })
 
 module.exports = userRouter

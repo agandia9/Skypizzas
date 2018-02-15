@@ -21,6 +21,10 @@ class VoteLogic{
                 }
             })
     }
+    resetVotes(){
+        userLogic.resetVotes()
+        return voteData.resetVotes()
+    }
 }
 function checkUserAndVote(name){
     return userLogic.listUsers()
