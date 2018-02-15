@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './MenuPizzas.css';
 import { Link } from 'react-router-dom'
-
-import PizzaCard from '../PizzaCard'
 import swal from 'sweetalert'
 
+import './MenuPizzas.css';
+
+import PizzaCard from '../PizzaCard'
 
 class MenuPizzas extends Component {
 	constructor(){
@@ -31,7 +31,6 @@ class MenuPizzas extends Component {
 		this.setState({ filteredName: e.target.value})
 	}
 
-	
 	filterNames = (id) => {
 		console.log(id)
 		const { pizzas, filteredName } = this.state
@@ -100,8 +99,11 @@ class MenuPizzas extends Component {
 					}).then((res)=>{
 						return res.json()
 					}).then((res)=>{
-						console.log(res)
-						swal('U voted correctly 🤩','Wait for PETA time!', 'success')
+						if(res.status === "KO"){
+							swal('Something failed...' ,'', 'error')
+						}else{
+							swal('U voted correctly 🤩','Wait for PETA time!', 'success')
+						}
 					}).catch((err)=>{
 						swal('Something failed...' ,'', 'error')
 					})
@@ -134,9 +136,8 @@ class MenuPizzas extends Component {
 		<input type="text" placeholder="Filter ur pizza" onChange={this.filteredPizza}/>
 		<div className="Select-pizza">
 		{
-			 this.state.loading ? <h3 className="loading"> Loading...</h3> :
+			 this.state.loading ? <h3 className="loading"> Loading...</h3> : 
 				pizzas.filter(this.filterNames).map((pizza, index)=>{
-					console.log(pizza, index)
 				return (
 					<PizzaCard 
 						key={index}
@@ -149,6 +150,7 @@ class MenuPizzas extends Component {
 					)
 	}
 		</div>
+	{/*separate in component...*/}
 		<form>
 			<h1>Your selection</h1>
 			<ul>

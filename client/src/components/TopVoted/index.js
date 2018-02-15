@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { Link } from 'react-router-dom'
 import './TopVoted.css';
 
@@ -27,7 +28,6 @@ class TopVoted extends Component {
 		<div class="TopVoted-menu">
 			<h2>Top Voted :)</h2>
 			{
-				//console.log(this.state.ranking)
 				this.state.ranking.map((pizza, index)=>{
 					return <p>{pizza.name} - {pizza.quantity}</p>
 				})
