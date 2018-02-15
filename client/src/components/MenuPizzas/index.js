@@ -32,7 +32,6 @@ class MenuPizzas extends Component {
 	}
 
 	filterNames = (id) => {
-		console.log(id)
 		const { pizzas, filteredName } = this.state
 		if (filteredName === '') {
 			return true

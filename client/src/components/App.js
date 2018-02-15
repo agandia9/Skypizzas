@@ -5,6 +5,8 @@ import './App.css';
 
 import MenuPizzas from './MenuPizzas'
 import TopVoted from './TopVoted'
+import {AdminPlace} from './AdminPlace'
+
 class App extends Component {
   render() {
     return (
@@ -17,6 +19,7 @@ class App extends Component {
             </header>
             <Route exact path='/' component={MenuPizzas} />
             <Route path='/topvoted' component={TopVoted} />
+            <Route path='/admin' component={AdminPlace} />
           </div>
         </div>
       </BrowserRouter>
