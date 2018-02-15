@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './MenuPizzas.css';
+import { Link } from 'react-router-dom'
+
 import PizzaCard from '../PizzaCard'
 import swal from 'sweetalert'
 
@@ -11,7 +13,8 @@ class MenuPizzas extends Component {
 			yourSelection:[],
 			pizzas: [],
 			loading:true,
-			name:''
+			name:'',
+			filteredName: ''
 		}
 	}
 	componentWillMount(){
@@ -23,6 +26,25 @@ class MenuPizzas extends Component {
 			})
 		})
 	}
+
+	filteredPizza = (e)=>{ 
+		this.setState({ filteredName: e.target.value})
+	}
+
+	
+	filterNames = (id) => {
+		console.log(id)
+		const { pizzas, filteredName } = this.state
+		if (filteredName === '') {
+			return true
+		} else if (id.name.includes(filteredName)) {
+			return true
+		} else {
+			return false
+		}
+	}
+
+
 	vote = (e) =>{
 		if(this.state.yourSelection.length > 2){
 			return 'u focking idiot.'
@@ -56,7 +78,7 @@ class MenuPizzas extends Component {
 						content: {
 						element: "input",
 						attributes: {
-						  placeholder: "Type your name"
+						  placeholder: "Type your Github name ..."
 						}
 					  },
 
@@ -80,8 +102,9 @@ class MenuPizzas extends Component {
 					}).then((res)=>{
 						console.log(res)
 						swal('U voted correctly 🤩','Wait for PETA time!', 'success')
+					}).catch((err)=>{
+						swal('Something failed...' ,'', 'error')
 					})
-					
 					// for get votes!
 					// fetch('http://192.168.0.11:8080/votes',{
 					//     method: "GET",
@@ -91,8 +114,6 @@ class MenuPizzas extends Component {
 					// }).then((res)=>{
 					// 	console.log(res)
 					// })
-
-
 				}).then(()=>{  
 						this.setState({
 							yourSelection:[]
@@ -105,18 +126,17 @@ class MenuPizzas extends Component {
 	}
 
   render() {
+  	const {pizzas, filteredPizza } = this.state
 	return (
 	<div className="Pizzas-menu">
 		<h3>Vote ur pizza :)</h3>
 		<h4>Happy friday bro! <span role="img" aria-label="icon">🤘🏼</span></h4>
-
-		<input type="text" placeholder="Filter ur pizza"/>
+		<input type="text" placeholder="Filter ur pizza" onChange={this.filteredPizza}/>
 		<div className="Select-pizza">
 		{
 			 this.state.loading ? <h3 className="loading"> Loading...</h3> :
-			 
-			 
-				this.state.pizzas.map((pizza, index)=>{
+				pizzas.filter(this.filterNames).map((pizza, index)=>{
+					console.log(pizza, index)
 				return (
 					<PizzaCard 
 						key={index}
@@ -142,6 +162,7 @@ class MenuPizzas extends Component {
 			</ul>
 			<button onClick={this.pushUpvotes} className="Submit-votes">Submit your votes!</button>
 		</form>
+		<Link to='/topvoted'>Top Voted</Link>
 	</div>
 	);
   }
