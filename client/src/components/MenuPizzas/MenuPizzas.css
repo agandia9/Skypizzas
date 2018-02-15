@@ -35,6 +35,7 @@ h4{
 }
 
 input{
+	outline: none;
     width: 100%;
     background-color: transparent;
     border: 0;
