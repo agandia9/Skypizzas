@@ -11,7 +11,7 @@ class TopVoted extends Component {
 		}
 	}
 	componentWillMount(){
-		fetch('http://192.168.0.11:8080/votes').then(res => res.json())
+		fetch('https://hidden-peak-45393.herokuapp.com/votes').then(res => res.json())
 		.then(res => {
 			const result = Object.keys(res.data).map(function(key) {
 			  return {name: key, quantity: res.data[key]};

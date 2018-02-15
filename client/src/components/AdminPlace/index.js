@@ -18,7 +18,7 @@ class AdminPlace extends Component{
     checkPin = (pin) =>{
         var obj = {pin}
         var data = JSON.stringify(obj)
-        fetch('http://192.168.0.11:8080/admin/pin',{
+        fetch('https://hidden-peak-45393.herokuapp.com/admin/pin',{
 						method: "post",
 						body: data,
 						headers: {
@@ -36,7 +36,7 @@ class AdminPlace extends Component{
     }
     resetVotes(e){
         e.preventDefault()
-        fetch('http://192.168.0.11:8080/votes/reset').then(res => res.json())
+        fetch('https://hidden-peak-45393.herokuapp.com/votes/reset').then(res => res.json())
 		.then(res => {
             if(res.status==='OK'){
                 swal ("Votes deleted!" ,  "" ,  "success" )

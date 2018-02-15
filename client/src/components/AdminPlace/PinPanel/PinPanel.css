@@ -6,6 +6,7 @@
     flex-wrap: wrap;
 	justify-content: space-around;
     width: 160px;
+    
 }
 .round-button{
     border: 2px solid black;
