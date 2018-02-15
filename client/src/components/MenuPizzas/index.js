@@ -18,7 +18,7 @@ class MenuPizzas extends Component {
 		}
 	}
 	componentWillMount(){
-		fetch('http://192.168.0.11:8080/pizzas').then(res => res.json())
+		fetch('https://hidden-peak-45393.herokuapp.com/pizzas').then(res => res.json())
 		.then(res => {
 			this.setState({
 				pizzas:res.data,
@@ -89,7 +89,7 @@ class MenuPizzas extends Component {
 					var data = JSON.stringify(obj)
 					console.log(data)
 
-					fetch('http://192.168.0.11:8080/votes',{
+					fetch('https://hidden-peak-45393.herokuapp.com/votes',{
 						method: "post",
 						body: data,
 						headers: {
@@ -107,7 +107,7 @@ class MenuPizzas extends Component {
 						swal('Something failed...' ,'', 'error')
 					})
 					// for get votes!
-					// fetch('http://192.168.0.11:8080/votes',{
+					// fetch('https://hidden-peak-45393.herokuapp.com/votes',{
 					//     method: "GET",
 					//     body: obj
 					// }).then((res)=>{
