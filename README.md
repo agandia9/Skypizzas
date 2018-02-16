@@ -28,3 +28,6 @@ Next Features:
 - Admin place 
 - Responsive things
 - Automate processes
+- Automatic proporcional votes result
+- Github async (profile pic in vote)
+- Improve security...
