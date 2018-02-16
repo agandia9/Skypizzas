@@ -6,7 +6,9 @@
     margin-top: 250px;
     min-height: 100vh;
 }
-
+.Submit-votes{
+	cursor: pointer;
+}
 .Pizzas-menu h3{
 	margin:0;
 }

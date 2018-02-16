@@ -25,7 +25,6 @@ It allows students to vote their favorite pizza, for our weekly Pizza-Day
 
 Next Features:
 
-- Admin place 
 - Responsive things
 - Automate processes
 - Automatic proporcional votes result

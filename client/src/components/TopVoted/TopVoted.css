@@ -8,21 +8,39 @@
 }
 
 .TopVoted-menu h1{
-	font-size: 40px;
+	font-size: 45px;
+	text-decoration: underline;
 }
 .pizza-ranking{
+	margin-bottom: 5px;
+	margin-top: 10px;
 	font-size: 16px;
 	font-weight: bolder;
 }
 
 .pizza-ranking:nth-child(2){
+	color: green;
 	font-size: 30px;
 }
 
 .pizza-ranking:nth-child(3){
+	color: green;
 	font-size: 25px;
 }
 
 .pizza-ranking:nth-child(4){
+	color: green;
 	font-size: 20px;
+}
+.pizza-ranking:nth-child(5){
+	color: green;
+	
+}
+.pizza-ranking:nth-child(6){
+	color: green;
+	
+}
+.pizza-ranking:nth-child(7){
+	color: green;
+	
 }

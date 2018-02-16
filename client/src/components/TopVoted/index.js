@@ -29,7 +29,7 @@ class TopVoted extends Component {
 			<h1>Top Voted Ranking <span role="img">🏆</span></h1>
 			{
 				this.state.ranking.map((pizza, index)=>{
-					return <p className="pizza-ranking">{index+1  + ' - ' + pizza.name.substr(0,1).toUpperCase() + pizza.name.substr(1)} | { 'Votes => ' + pizza.quantity}</p>
+					return <p className="pizza-ranking">{index+1  + ' - ' + pizza.name.substr(0,1).toUpperCase() + pizza.name.substr(1)} <br /> { 'Votes: ' + pizza.quantity}</p>
 				})
 			}
 			

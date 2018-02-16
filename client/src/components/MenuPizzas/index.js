@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import swal from 'sweetalert'
 
 import './MenuPizzas.css';
@@ -14,9 +14,19 @@ class MenuPizzas extends Component {
 			pizzas: [],
 			loading:true,
 			name:'',
-			filteredName: ''
+			filteredName: '',
+			thing:0
 		}
 	}
+  
+  secretClick = () => {
+    this.setState({
+      thing: this.state.thing+1
+    })
+
+  }
+
+
 	componentWillMount(){
 		fetch('https://hidden-peak-45393.herokuapp.com/pizzas').then(res => res.json())
 		.then(res => {
@@ -127,11 +137,17 @@ class MenuPizzas extends Component {
 	}
 
   render() {
+  	{
+  		if(this.state.thing === 5){
+  			console.log('????')
+  			return(<Redirect push to="admin"></Redirect>)
+  		}
+  	}
   	const {pizzas, filteredPizza } = this.state
 	return (
 	<div className="Pizzas-menu">
 		<h3>Vote ur pizza :)</h3>
-		<h4>Happy friday bro! <span role="img" aria-label="icon">🤘🏼</span></h4>
+		<h4>Happy friday bro! <span role="img" aria-label="icon" onClick={this.secretClick}>🤘🏼</span></h4>
 		<input type="text" placeholder="Filter ur pizza" onChange={this.filteredPizza}/>
 		<div className="Select-pizza">
 		{

@@ -14,7 +14,7 @@ class App extends Component {
         <div className="Main">
           <div className="App">
             <header className="App-header">
-              <h1 className="App-title">SkyPizzas <span role="img" aria-label="icon">🍕</span></h1>
+              <h1 className="App-title">SkyPizzas <span role="img" aria-label="icon" onClick={this.secretClick}>🍕</span></h1>
               <p className="App-intro">Deadline for voting is set at 11:00 AM of every friday<span role="img" aria-label="icon">🕚</span></p>
               <p className="App-intro">You MUST vote max. 3 pizzas</p>
             </header>
