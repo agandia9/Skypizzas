@@ -21,8 +21,8 @@ userRouter.route('/')
             })
     })
     .post((req,res)=>{
-        const {names} = req.body 
-        userLogic.addUsers(names)
+        const {names, pin} = req.body 
+        userLogic.addUsers(names,pin)
             .then(user=>{
                 res.json({
                     status: 'OK',
