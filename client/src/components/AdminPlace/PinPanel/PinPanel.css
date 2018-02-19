@@ -5,6 +5,19 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	width: 300px;
+	margin-bottom: 50px;
+}
+
+.admin-options{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
+}
+textarea{
+	width: 400px;
+	height: 200px;
+	margin-left: 5%;
 }
 .round-button{
 	border: 2px solid black;
@@ -19,13 +32,16 @@
 .round-button:hover{
 	background-color: #978557;
 	color:white;
-}
-.button-admin{
-	margin-top: 50px;
-	background-color: #727272;
-	font-size: 25px;
-	width: 100%;
-	bottom: 0;
-	height: 50px;
-	border:0;
+}	
+
+.button-admin {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 19px;
+  background: #cfc33e;
+  padding: 20px 40px 19px 40px;
+  text-decoration: none;
 }
