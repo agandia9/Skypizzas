@@ -3,7 +3,7 @@ const User = require('./UserModel')
 class UserData{
     listUsers(){
         return new Promise((resolve,reject)=>{
-            User.find({},'-_id')
+            User.find({},'-_id -name')
                 .then(resolve)
                 .catch(reject)
         })
