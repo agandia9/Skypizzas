@@ -31,7 +31,7 @@ class VoteLogic{
     }
 }
 function checkUserAndVote(name){
-    return userLogic.listUsers()
+    return userLogic.listUserNames()
         .then(users=>(checkUser(users,name) && !checkVote(users,name)))
 }
 

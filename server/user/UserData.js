@@ -8,6 +8,13 @@ class UserData{
                 .catch(reject)
         })
     }
+    listUserNames(){
+        return new Promise((resolve,reject)=>{
+            User.find({},'-_id')
+                .then(resolve)
+                .catch(reject)
+        })
+    }
     addUser(name, realname){
         return new Promise((resolve,reject)=>{
             if(!name)

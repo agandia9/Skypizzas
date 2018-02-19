@@ -5,6 +5,9 @@ class UserLogic{
     listUsers(){
         return userData.listUsers()
     }
+    listUserNames(){
+        return userData.listUserNames()
+    }
     addUsers(names, pin){
         if(pin !== process.env.PIN)
             throw new Error('Incorrect Pin')
