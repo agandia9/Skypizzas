@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 
 const UserSchema = new Schema ({
     name: String,
+    realname: String,
     voted: {type: Boolean, default: false}
 })
 
