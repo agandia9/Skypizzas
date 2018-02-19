@@ -48,6 +48,16 @@ class TopVoted extends Component {
 						return user.voted === true ? <p className="user-ranking">{user.realname[0].toUpperCase() +  '' + user.realname.substr(1)}</p> : ''
 					})
 				}
+				
+			</div>
+			<div>
+				<h1>Who NOT voted? <span role="img">👥</span></h1>
+				{
+					this.state.rankingUsers.map((user)=>{
+						console.log(user)
+						return user.voted === false ? <p className="user-ranking">{user.realname[0].toUpperCase() +  '' + user.realname.substr(1)}</p> : ''
+					})
+				}
 			</div>
 			<Link to='/'>Home</Link>
 		</div>

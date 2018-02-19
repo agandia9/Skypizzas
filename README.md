@@ -25,8 +25,4 @@ It allows students to vote their favorite pizza, for our weekly Pizza-Day
 
 Next Features:
 
-- Responsive things
-- Automate processes
 - Automatic proporcional votes result
-- Github async (profile pic in vote)
-- Improve security...
