@@ -8,13 +8,13 @@ class UserLogic{
     listUserNames(){
         return userData.listUserNames()
     }
-    addUsers(names, pin){
+    addUsers(users, pin){
         if(pin !== process.env.PIN)
             throw new Error('Incorrect Pin')
 
-        for(let i = 0; i<names.length; i++){
-            const _name = names[i].name.toLowerCase()
-            const _realname = names[i].realname.toLowerCase()
+        for(let i = 0; i<users.length; i++){
+            const _name = users[i].name.toLowerCase()
+            const _realname = users[i].realname.toLowerCase()
             userData.addUser(_name, _realname)
         }
         return new Promise((resolve,reject)=>{
