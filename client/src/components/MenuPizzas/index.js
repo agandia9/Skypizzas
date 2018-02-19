@@ -18,13 +18,12 @@ class MenuPizzas extends Component {
 			thing:0
 		}
 	}
-  
-  secretClick = () => {
-    this.setState({
-      thing: this.state.thing+1
-    })
 
-  }
+	secretClick = () => {
+		this.setState({
+			thing: this.state.thing + 1
+		})
+	}
 
 
 	componentWillMount(){
@@ -116,15 +115,6 @@ class MenuPizzas extends Component {
 					}).catch((err)=>{
 						swal('Something failed...' ,'', 'error')
 					})
-					// for get votes!
-					// fetch('https://hidden-peak-45393.herokuapp.com/votes',{
-					//     method: "GET",
-					//     body: obj
-					// }).then((res)=>{
-					// 	return res.json()
-					// }).then((res)=>{
-					// 	console.log(res)
-					// })
 				}).then(()=>{  
 						this.setState({
 							yourSelection:[]
@@ -136,14 +126,14 @@ class MenuPizzas extends Component {
 
 	}
 
-  render() {
-  	{
-  		if(this.state.thing === 5){
-  			console.log('????')
-  			return(<Redirect push to="admin"></Redirect>)
-  		}
-  	}
-  	const {pizzas, filteredPizza } = this.state
+	render() {
+		{
+			if(this.state.thing === 5){
+				console.log('????')
+				return(<Redirect push to="admin"></Redirect>)
+			}
+		}
+	const {pizzas, filteredPizza } = this.state
 	return (
 	<div className="Pizzas-menu">
 		<h3>Vote ur pizza :)</h3>
@@ -163,23 +153,26 @@ class MenuPizzas extends Component {
 					/>)
 						}
 					)
-	}
+		}
 		</div>
-	{/*separate in component...*/}
-		<form>
-			<h1>Your selection</h1>
-			<ul>
-				{
-					this.state.yourSelection.map((pizza, index)=>{
-						return(
-						<li key={index}> {pizza}<span role="img"  data={pizza} onClick={this.deleteSelection}>❌</span></li>
-						)
-					})
-				}
-			</ul>
-			<button onClick={this.pushUpvotes} className="Submit-votes">Submit your votes!</button>
-		</form>
-		<Link to='/topvoted'>Top Voted</Link>
+		{
+			this.state.loading ? '' : <form>
+					<h1>Your selection</h1>
+					<ul>
+						{
+							this.state.yourSelection.map((pizza, index)=>{
+								return(
+								<li key={index}> {pizza}<span role="img"  data={pizza} onClick={this.deleteSelection}>❌</span></li>
+								)
+							})
+						}
+					</ul>
+					<button onClick={this.pushUpvotes} className="Submit-votes">Submit your votes!</button>
+				</form>
+			}
+		{
+			this.state.loading ? '' : <Link to='/topvoted'>Top Voted</Link>
+		}
 	</div>
 	);
   }

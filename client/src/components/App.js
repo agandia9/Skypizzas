@@ -15,8 +15,8 @@ class App extends Component {
           <div className="App">
             <header className="App-header">
               <h1 className="App-title">SkyPizzas <span role="img" aria-label="icon" onClick={this.secretClick}>🍕</span></h1>
-              <p className="App-intro">Deadline for voting is set at 11:00 AM of every friday<span role="img" aria-label="icon">🕚</span></p>
-              <p className="App-intro">You MUST vote max. 3 pizzas</p>
+              <p className="App-intro">Deadline for voting is set at 12:00 AM of every friday <span role="img" aria-label="icon">🕛</span></p>
+              <p className="App-intro">You MUST vote 3 pizzas and you can distribute the votes as you want</p>
             </header>
             <Route exact path='/' component={MenuPizzas} />
             <Route path='/topvoted' component={TopVoted} />

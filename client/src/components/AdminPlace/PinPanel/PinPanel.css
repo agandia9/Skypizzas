@@ -1,24 +1,31 @@
 .container-pin-panel{
-    margin:auto;
-    border: 4px solid black;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
+	margin:auto;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
-    width: 160px;
-    
+	width: 300px;
 }
 .round-button{
-    border: 2px solid black;
-    border-radius: 25px;
-    font-family: Courier;
-    font-size: 20px;
-    background-color: #c6ab67;
-    width: 50px;
-    height: 50px;
-    outline: none;
+	border: 2px solid black;
+	border-radius: 50px;
+	font-family: Courier;
+	font-size: 30px;
+	background-color: #c6ab67;
+	width: 100px;
+	height: 100px;
+	outline: none;
 }
 .round-button:hover{
-    background-color: #978557;
-    color:white;
+	background-color: #978557;
+	color:white;
+}
+.button-admin{
+	margin-top: 50px;
+	background-color: #727272;
+	font-size: 25px;
+	width: 100%;
+	bottom: 0;
+	height: 50px;
+	border:0;
 }
