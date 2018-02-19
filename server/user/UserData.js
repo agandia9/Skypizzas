@@ -3,17 +3,27 @@ const User = require('./UserModel')
 class UserData{
     listUsers(){
         return new Promise((resolve,reject)=>{
+            User.find({},'-_id -name')
+                .then(resolve)
+                .catch(reject)
+        })
+    }
+    listUserNames(){
+        return new Promise((resolve,reject)=>{
             User.find({},'-_id')
                 .then(resolve)
                 .catch(reject)
         })
     }
-    addUser(name){
+    addUser(name, realname){
         return new Promise((resolve,reject)=>{
             if(!name)
-            throw new Error('no name provided')
+                throw new Error('no name provided')
 
-        const user = new User({name})
+            if(!realname)
+                throw new Error('no real name provided')
+
+        const user = new User({name, realname})
 
         user.save()
             .then(resolve)
@@ -34,6 +44,14 @@ class UserData{
         return new Promise((resolve,reject)=>{
 
             User.update({},{voted:false},{multi: true})
+                .then(resolve)
+                .catch(reject)
+        })
+    }
+    deleteUsers(){
+        return new Promise((resolve,reject)=>{
+
+            User.remove({})
                 .then(resolve)
                 .catch(reject)
         })

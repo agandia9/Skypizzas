@@ -7,37 +7,33 @@ class AdminPlace extends Component{
 	constructor(){
 		super()
 
-		this.state={
-			pin: '',
-			showPanel: false
-		}
-	}
-	changePin = (e) =>{
-		const pin = e.target.value
-		this.setState({pin})
-	}
-	checkPin = (pin) =>{
-		var obj = {pin}
-		var data = JSON.stringify(obj)
-		fetch('https://hidden-peak-45393.herokuapp.com/admin/pin',{
+        this.state={
+            correctPin: '',
+            showPanel: false
+        }
+    }
+    checkPin = (pin) =>{
+        var obj = {pin}
+        var data = JSON.stringify(obj)
+        fetch('https://hidden-peak-45393.herokuapp.com/admin/pin',{
 						method: "post",
 						body: data,
 						headers: {
 							'content-type': 'application/json'
 						}
-					})
-				.then(res=>{
-					return res.json()
-				}).then(res=>{
-					console.log(res)
-					if(res.status ==='OK'){
-						this.setState({showPanel: true})
-					}
-				})
-	}
-	resetVotes(e){
-		e.preventDefault()
-		fetch('https://hidden-peak-45393.herokuapp.com/votes/reset').then(res => res.json())
+                    })
+                .then(res=>{
+                    return res.json()
+                }).then(res=>{
+                    console.log(res)
+                    if(res.status ==='OK'){
+                        this.setState({showPanel: true, correctPin: pin })
+                    }
+                })
+    }
+    resetVotes(e){
+        e.preventDefault()
+        fetch('https://hidden-peak-45393.herokuapp.com/votes/reset').then(res => res.json())
 		.then(res => {
 			if(res.status==='OK'){
 				swal ("Votes deleted!" ,  "" ,  "success")

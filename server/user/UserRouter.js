@@ -37,5 +37,22 @@ userRouter.route('/')
                 })
             })
     })
+    .delete((req,res)=>{
+        const {pin} = req.body 
+        userLogic.deleteUsers(pin)
+            .then(user=>{
+                res.json({
+                    status: 'OK',
+                    message: 'Users deleted successfully',
+                    data: user
+                })
+            })
+            .catch(err=>{
+                res.json({
+                    status: 'KO',
+                    message: err.message
+                })
+            })
+    })
 
 module.exports = userRouter

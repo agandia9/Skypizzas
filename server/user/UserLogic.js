@@ -5,13 +5,17 @@ class UserLogic{
     listUsers(){
         return userData.listUsers()
     }
+    listUserNames(){
+        return userData.listUserNames()
+    }
     addUsers(names, pin){
         if(pin !== process.env.PIN)
             throw new Error('Incorrect Pin')
 
         for(let i = 0; i<names.length; i++){
-            const _name = names[i].toLowerCase()
-            userData.addUser(_name)
+            const _name = names[i].name.toLowerCase()
+            const _realname = names[i].realname.toLowerCase()
+            userData.addUser(_name, _realname)
         }
         return new Promise((resolve,reject)=>{
             resolve('ok')
@@ -23,6 +27,12 @@ class UserLogic{
     }
     resetVotes(){
         userData.resetVotes()
+    }
+    deleteUsers(pin){
+        if(pin !== process.env.PIN)
+            throw new Error('Incorrect Pin')
+            
+        return userData.deleteUsers()
     }
 }
 

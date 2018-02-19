@@ -1,3 +1,4 @@
+require('dotenv').config()
 const voteData = new(require('./VoteData'))
 const userLogic = new(require('../user/UserLogic'))
 
@@ -21,12 +22,16 @@ class VoteLogic{
                 }
             })
     }
-    resetVotes(){
+    resetVotes(pin){
+        if(pin !== process.env.PIN)
+            throw new Error('Incorrect Pin')
+
+        userLogic.resetVotes()
         return voteData.resetVotes()
     }
 }
 function checkUserAndVote(name){
-    return userLogic.listUsers()
+    return userLogic.listUserNames()
         .then(users=>(checkUser(users,name) && !checkVote(users,name)))
 }
 
