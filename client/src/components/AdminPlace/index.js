@@ -53,6 +53,7 @@ class AdminPlace extends Component{
 					<div>
 						<h2>Add Users</h2>
 						<textarea name="" id="" cols="30" rows="10" placeholder="Users here"></textarea>
+						<button>Add Users</button>
 					</div>
 					<div>
 						<h2>Delete Users</h2>
