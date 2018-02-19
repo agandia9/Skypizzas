@@ -40,8 +40,9 @@ voteRouter.route('/')
     })
 
 voteRouter.route('/reset')
-    .get((req,res)=>{
-        voteLogic.resetVotes()
+    .post((req,res)=>{
+        const {pin} = req.body 
+        voteLogic.resetVotes(pin)
             .then(votes=>{
                 res.json({
                     status: 'OK',
