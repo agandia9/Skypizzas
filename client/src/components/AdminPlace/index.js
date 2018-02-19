@@ -7,13 +7,9 @@ class AdminPlace extends Component{
         super()
 
         this.state={
-            pin: '',
+            correctPin: '',
             showPanel: false
         }
-    }
-    changePin = (e) =>{
-        const pin = e.target.value
-        this.setState({pin})
     }
     checkPin = (pin) =>{
         var obj = {pin}
@@ -30,7 +26,7 @@ class AdminPlace extends Component{
                 }).then(res=>{
                     console.log(res)
                     if(res.status ==='OK'){
-                        this.setState({showPanel: true})
+                        this.setState({showPanel: true, correctPin: pin })
                     }
                 })
     }
