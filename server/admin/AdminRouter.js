@@ -1,12 +1,13 @@
+require('dotenv').config()
 const express = require('express')
 const adminRouter = express.Router()
-const correctPin = "3535"
+
 
 adminRouter.route('/pin')
     .post((req,res)=>{
         const {pin} = req.body 
 
-        if(pin === correctPin){
+        if(pin === process.env.PIN){
             res.json({
                 status: 'OK',
                 message: 'Correct Pin',

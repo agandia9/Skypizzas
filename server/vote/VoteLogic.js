@@ -22,7 +22,6 @@ class VoteLogic{
             })
     }
     resetVotes(){
-        userLogic.resetVotes()
         return voteData.resetVotes()
     }
 }
