@@ -1,0 +1,92 @@
+[
+    {
+        "name":"Queso de cabra y espinacas",
+        "ingredients":"Crema fresca, queso 100% mozzarella, queso de cabra, espinacas, tomate natural y cebolla caramelizada.",
+        "image":"http://www.dominospizza.es/images/Queso de cabra y espinacass.png"
+    },
+    {
+        "name":"Queso ibérico curado y jamón serrano",
+        "ingredients":"Salsa de tomate, queso 100% mozzarella, queso ibérico curado, jamón serrano, aceite de oliva virgen extra y tomillo seco.",
+        "image":"http://www.dominospizza.es/images/Queso iberico curado y jamon serranoo.png"
+    },
+    {
+        "name":"Con parmesano y espárragos",
+        "ingredients":"Crema fresca, queso 100% mozzarella, parmesano, espárragos, bacon, champiñón y pollo a la parrilla en nuestra masa original con aceitunas y aceite de oliva virgen extra.",
+        "image":"http://www.dominospizza.es/images/Parmesano, esparragos i baconn.png"
+    },
+    {
+        "name":"Cheesix",
+        "ingredients":"Crema fresca, queso 100% mozzarella, cheddar, emmental, parmesano, gorgonzola, queso de cabra.",
+        "image":"http://www.dominospizza.es/images/6quesos.png"
+    },
+    {
+        "name":"Pulled Beef",
+        "ingredients":"Salsa BBQ, mozzarella, ternera deshilachada asada lentamente, cebolla, bacon, salsa chimichurri.",
+        "image":"http://www.dominospizza.es/images/Pulled Beef.png"
+    },
+    {
+        "name":"Cremozza BBQ",
+        "ingredients":"Base de crema fresca, queso 100% mozzarella, bacon, pollo a la parrilla, cebolla, salsa barbacoa.",
+        "image":"http://www.dominospizza.es/images/cremozza_bbq.png"
+    },
+    {
+        "name":"Cremozza al estilo Bourbon",
+        "ingredients":"Base de crema fresca, queso 100% mozzarella, bacon, pollo a la parrilla, cebolla, salsa Bourbon (0% Alcohol).",
+        "image":"http://www.dominospizza.es/images/cremozza_estilo_bourbon.png"
+    },
+    {
+        "name":"Cabramelizada",
+        "ingredients":"Crema fresca, queso 100% mozzarella, queso de cabra, cebolla caramelizada.",
+        "image":"http://www.dominospizza.es/images/Cabramelizada.jpg"
+    },
+    {
+        "name":"Barbacoa",
+        "ingredients":"Salsa barbacoa, queso 100% mozzarella, ternera especiada, cebolla, bacon, maíz.",
+        "image":"http://www.dominospizza.es/images/Barbacoa.png"
+    },
+    {
+        "name":"Pecado Carnal",
+        "ingredients":"Salsa de tomate, extra de queso 100% mozzarella, ternera especiada, bacon, pepperoni, york.",
+        "image":"http://www.dominospizza.es/images/pecado_carnal.png"
+    },
+    {
+        "name":"Carbonara",
+        "ingredients":"Crema fresca, queso 100% mozzarella, bacon, champiñón y cebolla.",
+        "image":"http://www.dominospizza.es/images/Carbonara.png"
+    },
+    {
+        "name":"Pollo a la Parrilla",
+        "ingredients":"Salsa de tomate, queso 100% mozzarella, doble de pollo a la parrilla, cebolla, champiñón y maíz.",
+        "image":"http://www.dominospizza.es/images/pollo_a_la_parrilla.png"
+    },
+    {
+        "name":"Cuatro Quesos",
+        "ingredients":"Salsa de tomate, queso 100% mozzarella, cheddar, emmental, gorgonzola (receta mejorada).",
+        "image":"http://www.dominospizza.es/images/4quesos.png"
+    },
+    {
+        "name":"Hawaiana Plus",
+        "ingredients":"Salsa de tomate, extra de queso 100% mozzarella, doble de York y piña.",
+        "image":"http://www.dominospizza.es/images/hawaiana_plus.png"
+    },
+    {
+        "name":"Extravaganzza",
+        "ingredients":"Salsa de tomate, mozzarella, ternera especiada, pepperoni, York, bacon, cebolla, pimiento verde, champiñón y aceitunas negras.",
+        "image":"http://www.dominospizza.es/images/extravaganzza.png"
+    },
+    {
+        "name":"Patanegra",
+        "ingredients":"Salsa de tomate, queso 100% mozzarella, jamón serrano, aceite de oliva Carbonell, aceitunas negras, tomate natural y orégano.",
+        "image":"http://www.dominospizza.es/images/pata_negra.png"
+    },
+    {
+        "name":"Campiña",
+        "ingredients":"Salsa de tomate, extra de queso 100% mozzarella, champiñón, pimiento verde, cebolla, aceitunas negras y tomate natural.",
+        "image":"http://www.dominospizza.es/images/Campina.jpg"
+    },
+    {
+        "name":"Tony Pepperoni",
+        "ingredients":"Salsa de tomate, extra de queso 100% mozzarella y doble de pepperoni.",
+        "image":"http://www.dominospizza.es/images/tony_pepperoni.png"
+    }
+]

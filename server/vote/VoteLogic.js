@@ -1,6 +1,6 @@
-require('dotenv').config()
 const voteData = new(require('./VoteData'))
 const userLogic = new(require('../user/UserLogic'))
+const Pin = require('../admin/pin')
 
 class VoteLogic{
     listVotes(){
@@ -23,7 +23,7 @@ class VoteLogic{
             })
     }
     resetVotes(pin){
-        if(pin !== process.env.PIN)
+        if(Pin.checkPin(pin))
             throw new Error('Incorrect Pin')
 
         userLogic.resetVotes()
