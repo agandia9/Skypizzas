@@ -9,7 +9,7 @@ class UserLogic{
         return userData.listUserNames()
     }
     addUsers(users, pin){
-        if(Pin.checkPin(pin))
+        if(!Pin.checkPin(pin))
             throw new Error('Incorrect Pin')
 
         for(let i = 0; i<users.length; i++){
@@ -29,7 +29,7 @@ class UserLogic{
         userData.resetVotes()
     }
     deleteUsers(pin){
-        if(Pin.checkPin(pin))
+        if(!Pin.checkPin(pin))
             throw new Error('Incorrect Pin')
             
         return userData.deleteUsers()

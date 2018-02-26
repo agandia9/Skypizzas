@@ -23,7 +23,7 @@ class VoteLogic{
             })
     }
     resetVotes(pin){
-        if(Pin.checkPin(pin))
+        if(!Pin.checkPin(pin))
             throw new Error('Incorrect Pin')
 
         userLogic.resetVotes()
