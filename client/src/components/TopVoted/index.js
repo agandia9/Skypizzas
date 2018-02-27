@@ -36,7 +36,7 @@ class TopVoted extends Component {
 				<h1>Top Voted Ranking <span role="img">🏆</span></h1>
 				{
 					this.state.ranking.map((pizza, index)=>{
-						return <p className="pizza-ranking">{index+1  + ' - ' + pizza.name.substr(0,1).toUpperCase() + pizza.name.substr(1)} <br /> { 'Votes: ' + pizza.quantity}</p>
+						return <p className="pizza-ranking">{index+1 + ' - ' + pizza.name.substr(0,1).toUpperCase() + pizza.name.substr(1)} <br /> { 'Votes: ' + pizza.quantity}</p>
 					})
 				}
 			</div>
@@ -44,7 +44,6 @@ class TopVoted extends Component {
 				<h1>Who voted? <span role="img">👥</span></h1>
 				{
 					this.state.rankingUsers.map((user)=>{
-						console.log(user)
 						return user.voted === true ? <p className="user-ranking">{user.realname[0].toUpperCase() +  '' + user.realname.substr(1)}</p> : ''
 					})
 				}
@@ -54,7 +53,6 @@ class TopVoted extends Component {
 				<h1>Who NOT voted? <span role="img">👥</span></h1>
 				{
 					this.state.rankingUsers.map((user)=>{
-						console.log(user)
 						return user.voted === false ? <p className="user-ranking">{user.realname[0].toUpperCase() +  '' + user.realname.substr(1)}</p> : ''
 					})
 				}

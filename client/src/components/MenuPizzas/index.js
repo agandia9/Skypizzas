@@ -87,7 +87,7 @@ class MenuPizzas extends Component {
 						attributes: {
 						  placeholder: "Type your Github name ..."
 						}
-					  },
+					},
 
 				}).then((value)=>{
 					this.setState({
@@ -129,14 +129,13 @@ class MenuPizzas extends Component {
 	render() {
 		{
 			if(this.state.thing === 5){
-				console.log('????')
 				return(<Redirect push to="admin"></Redirect>)
 			}
 		}
 	const {pizzas, filteredPizza } = this.state
 	return (
 	<div className="Pizzas-menu">
-		<h3>Vote ur pizza :)</h3>
+		<h3>Vote your favourite pizzas!</h3>
 		<h4>Happy friday bro! <span role="img" aria-label="icon" onClick={this.secretClick}>🤘🏼</span></h4>
 		<input type="text" placeholder="Filter ur pizza" onChange={this.filteredPizza}/>
 		<div className="Select-pizza">
