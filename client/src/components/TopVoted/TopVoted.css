@@ -53,3 +53,12 @@
 .user-ranking{
 	font-size: 25px;
 }
+
+@media only screen and (max-width: 795px) {
+	.TopVoted-menu{
+		margin-top: 115px; 
+	}
+	.TopVoted-menu h1{
+		font-size: 27px;
+	}
+}

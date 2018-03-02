@@ -15,7 +15,8 @@ class MenuPizzas extends Component {
 			loading:true,
 			name:'',
 			filteredName: '',
-			thing:0
+			thing:0,
+			totopvoted:false
 		}
 	}
 
@@ -110,7 +111,12 @@ class MenuPizzas extends Component {
 						if(res.status === "KO"){
 							swal('Something failed...' ,'', 'error')
 						}else{
-							swal('U voted correctly 🤩','Wait for PETA time!', 'success')
+							swal('U voted correctly 🤩','Wait for PETA time!', 'success').then(()=>{
+								this.setState({
+									totopvoted: true
+								})
+							})
+							
 						}
 					}).catch((err)=>{
 						swal('Something failed...' ,'', 'error')
@@ -130,6 +136,9 @@ class MenuPizzas extends Component {
 		{
 			if(this.state.thing === 5){
 				return(<Redirect push to="admin"></Redirect>)
+			}
+			if (this.state.totopvoted === true) {
+				return(<Redirect to="topvoted"></Redirect>)
 			}
 		}
 	const {pizzas, filteredPizza } = this.state
