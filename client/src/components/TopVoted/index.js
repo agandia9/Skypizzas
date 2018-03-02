@@ -12,6 +12,7 @@ class TopVoted extends Component {
 		}
 	}
 	componentWillMount(){
+		window.scrollTo(0, 0)
 		fetch('https://hidden-peak-45393.herokuapp.com/votes').then(res => res.json())
 		.then(res => {
 			//console.log(res)

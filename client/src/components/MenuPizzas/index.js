@@ -28,6 +28,7 @@ class MenuPizzas extends Component {
 
 
 	componentWillMount(){
+		window.scrollTo(0, 0)
 		fetch('https://hidden-peak-45393.herokuapp.com/pizzas').then(res => res.json())
 		.then(res => {
 			this.setState({
