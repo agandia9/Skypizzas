@@ -3,7 +3,14 @@ const Vote = require('./VoteModel')
 class VoteData{
     listActualVotes(){
         return new Promise((resolve, reject) => {
-            Vote.find({date:null})
+            Vote.find({ date: { $exists: false }})
+                .then(resolve)
+                .catch(reject)
+        })  
+    }
+    listOldVotes(){
+        return new Promise((resolve, reject) => {
+            Vote.find({ date: { $exists: true }},'-_id -__v')
                 .then(resolve)
                 .catch(reject)
         })  

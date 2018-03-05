@@ -39,6 +39,24 @@ voteRouter.route('/')
             })
     })
 
+voteRouter.route('/old')
+    .get((req,res)=>{
+        voteLogic.listOldVotes()
+            .then(votes=>{
+                res.json({
+                    status: 'OK',
+                    message: 'Old Votes listed successfully',
+                    data: votes
+                })
+            })
+            .catch(err=>{
+                res.json({
+                    status: 'KO',
+                    message: err.message
+                })
+            })
+    })
+
 voteRouter.route('/reset')
     .post((req,res)=>{
         const {pin} = req.body 
