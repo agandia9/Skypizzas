@@ -7,7 +7,7 @@ class VoteLogic{
         return voteData.listActualVotes().then(res =>countPizzas(filterVotes(res)))
     }
     listOldVotes(){
-        return voteData.listOldVotes()
+        return voteData.listOldVotes().then(res =>countPizzas(filterVotes(res)))
     }
     
     addVote(name, vote1, vote2, vote3){

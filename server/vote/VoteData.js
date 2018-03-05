@@ -10,7 +10,7 @@ class VoteData{
     }
     listOldVotes(){
         return new Promise((resolve, reject) => {
-            Vote.find({ date: { $exists: true }},'-_id -__v')
+            Vote.find({ date: { $exists: true }},'-_id -__v -date')
                 .then(resolve)
                 .catch(reject)
         })  
