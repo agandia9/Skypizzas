@@ -13,6 +13,9 @@ class AdminPlace extends Component{
 			addingUsers:''
 		}
 	}
+	componentWillMount(){
+		window.scrollTo(0, 0)
+	}
 	checkPin = (pin) =>{
 		var obj = {pin}
 		var data = JSON.stringify(obj)

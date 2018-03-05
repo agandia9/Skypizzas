@@ -81,3 +81,9 @@ a{
 a:active{
 	text-decoration: none;
 }
+
+@media only screen and (max-width: 795px) {
+.Pizzas-menu{
+		margin-top: 115px;
+	}
+	}

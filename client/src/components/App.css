@@ -39,7 +39,11 @@
 		display: none;
 	}
 	.App-title{
-		font-size: 2em;
+		font-size: 1.2em;
+		margin-top: -10px;
+	}
+	.App-header{
+		height: 115px;
 	}
     .App-intro {
         display: none;
