@@ -6,7 +6,7 @@ const voteLogic = new(require('./VoteLogic'))
 
 voteRouter.route('/')
     .get((req,res)=>{
-        voteLogic.listVotes()
+        voteLogic.listActualVotes()
             .then(votes=>{
                 res.json({
                     status: 'OK',

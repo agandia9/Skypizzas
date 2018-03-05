@@ -1,9 +1,9 @@
 const Vote = require('./VoteModel')
 
 class VoteData{
-    listVotes(){
+    listActualVotes(){
         return new Promise((resolve, reject) => {
-            Vote.find({})
+            Vote.find({date:null})
                 .then(resolve)
                 .catch(reject)
         })  
@@ -29,13 +29,21 @@ class VoteData{
                 .catch(reject)
         })  
     }
-    resetVotes(){
-        return new Promise((resolve, reject) => {
-            Vote.remove({})
+    addDates(){
+        return new Promise((resolve,reject)=>{
+            const newDate = Date.now()
+            Vote.update({date:null},{date:newDate},{multi:true})
                 .then(resolve)
                 .catch(reject)
         })
     }
+    // resetVotes(){
+    //     return new Promise((resolve, reject) => {
+    //         Vote.remove({})
+    //             .then(resolve)
+    //             .catch(reject)
+    //     })
+    // }
 }
 
 module.exports = VoteData

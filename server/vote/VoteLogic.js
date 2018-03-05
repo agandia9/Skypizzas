@@ -3,8 +3,8 @@ const userLogic = new(require('../user/UserLogic'))
 const Pin = require('../admin/pin')
 
 class VoteLogic{
-    listVotes(){
-        return voteData.listVotes().then(res =>countPizzas(filterVotes(res)))
+    listActualVotes(){
+        return voteData.listActualVotes().then(res =>countPizzas(filterVotes(res)))
     }
     
     addVote(name, vote1, vote2, vote3){
@@ -27,7 +27,7 @@ class VoteLogic{
             throw new Error('Incorrect Pin')
 
         userLogic.resetVotes()
-        return voteData.resetVotes()
+        return voteData.addDates()
     }
 }
 function checkUserAndVote(name){
