@@ -62,9 +62,9 @@ class TopVoted extends Component {
 				</div>
 				
 			</div>
-		<div>
-			<Statistics />
-		</div>
+			
+				<Statistics />
+			
 		<Link to='/'>Home</Link>
 		</div>
 		);
