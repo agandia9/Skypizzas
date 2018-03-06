@@ -45,7 +45,7 @@ voteRouter.route('/old')
             .then(votes=>{
                 res.json({
                     status: 'OK',
-                    message: 'Old Votes listed successfully',
+                    message: 'Votes listed successfully',
                     data: votes
                 })
             })
