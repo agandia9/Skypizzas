@@ -7,7 +7,7 @@ class VoteLogic{
         return voteData.listActualVotes().then(res =>countPizzas(filterVotes(res)))
     }
     listOldVotes(){
-        return voteData.listOldVotes().then(res =>countPizzas(filterVotes(res)))
+        return voteData.listOldVotes().then(res =>filterVotesPerDate(res))
     }
     
     addVote(name, vote1, vote2, vote3){
@@ -52,6 +52,24 @@ function filterVotes(votes){
         filteredVotes.push(votes[i].vote2)
         filteredVotes.push(votes[i].vote3)
     }
+    return filteredVotes
+}
+function filterVotesPerDate(votes){
+    const filteredVotes = {}
+    let actualDate = ""
+    for(let i=0;i<votes.length; i++){
+        if(actualDate !== votes[i].date.toString()){
+            if(actualDate){
+                filteredVotes[actualDate] = countPizzas(filteredVotes[actualDate])
+            }
+            actualDate = votes[i].date.toString()
+            filteredVotes[actualDate]=[]
+        }
+        filteredVotes[actualDate].push(votes[i].vote1)
+        filteredVotes[actualDate].push(votes[i].vote2)
+        filteredVotes[actualDate].push(votes[i].vote3)
+    }
+    filteredVotes[actualDate] = countPizzas(filteredVotes[actualDate])
     return filteredVotes
 }
 function countPizzas(pizzas) {
