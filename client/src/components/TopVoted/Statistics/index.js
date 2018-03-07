@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import c3 from 'c3'
+import 'c3/c3.css';
 import {Carousel} from 'react-bootstrap'
 //import { BrowserRouter, Route, Link } from 'react-router-dom'
 import './Statistics.css';
