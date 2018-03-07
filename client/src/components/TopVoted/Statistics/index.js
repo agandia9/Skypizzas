@@ -30,25 +30,8 @@ class Statistics extends Component {
 			this.setState({
 				votes: arr
 			})
-			// for (var i = 0; i < Object.keys(things).length; i++) {
-			// 	const property = Object.keys(things)[i]
-			// 	Object.keys(things[property])
-			// }
-
-			
-			//console.log(thingsMore)
 			// // Enhanced Object Literals => Object.keys(things).map(function(k) { return {[k]:things[k]} })
 			// let arrOfThings = Object.keys(things).map(function(k) { return [k,things[k]] })
-			// //let arrOfThingsAdv = Object.keys(arrOfThings).map(function(k) { return [k,things[k]] })
-			// let arr = []
-			// arrOfThings.forEach((days)=>{
-			// 	console.log(Object.keys(days[1]).map(function(k) { return [k,days[1][k]] }))
-			// })
-
-			// 	this.setState((prevState)=>{
-			// 		return {votes:arrOfThings }
-			// 	})
-				
 		})
 	}
 	render(){
