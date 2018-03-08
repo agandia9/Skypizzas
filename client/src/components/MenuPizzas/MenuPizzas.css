@@ -83,7 +83,10 @@ a:active{
 }
 
 @media only screen and (max-width: 795px) {
-.Pizzas-menu{
+	.Pizzas-menu{
 		margin-top: 115px;
 	}
+	.loading{
+		font-size: 2.5em;
 	}
+}

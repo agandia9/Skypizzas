@@ -127,10 +127,7 @@ class MenuPizzas extends Component {
 							yourSelection:[]
 						})
 					})
-				
-				
 			}
-
 	}
 
 	render() {
