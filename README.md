@@ -18,7 +18,7 @@ It allows students to vote their favorite pizza, for our weekly Pizza-Day
 </div>
 
 ### How works?
-<div notitle class="cloudapp-embed" data-slug="3H0f2N0c1V1s"><a href="https://cl.ly/3H0f2N0c1V1s">Screen Recording 2018-03-08 at 12.19 p. m..gif</a><script async src="https://embed.cl.ly/embedded.gz.js" charset="utf-8"></script></div>
+<a href="https://cl.ly/3H0f2N0c1V1s" target="_blank"><img src="https://d2ffutrenqvap3.cloudfront.net/items/2C1B163e1y07152V1F3Q/Screen%20Recording%202018-03-08%20at%2012.19%20p.%20m..gif" style="display: block;height: auto;width: 100%;"/></a>
 
 ### Built by
 [agandia9](http://www.github.com/agandia9)
