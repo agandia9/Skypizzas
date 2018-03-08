@@ -18,7 +18,7 @@ It allows students to vote their favorite pizza, for our weekly Pizza-Day
 </div>
 
 ### How works?
-<img src="https://d2ffutrenqvap3.cloudfront.net/items/2C1B163e1y07152V1F3Q/Screen%20Recording%202018-03-08%20at%2012.19%20p.%20m..gif?v=7411b6a4" alt="">
+<img src="https://d2ffutrenqvap3.cloudfront.net/items/2C1B163e1y07152V1F3Q/Screen%20Recording%202018-03-08%20at%2012.19%20p.%20m..gif" alt="">
 
 ### Built by
 [agandia9](http://www.github.com/agandia9)
