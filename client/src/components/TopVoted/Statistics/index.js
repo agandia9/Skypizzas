@@ -40,7 +40,10 @@ class Statistics extends Component {
 							bindto: `#chart`,
 							data: {
 							  columns: 
-								this.state.votes
+								this.state.votes,
+								selection: {
+								    grouped: true
+								  }
 								
 							}
 						});

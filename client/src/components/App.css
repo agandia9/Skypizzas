@@ -9,7 +9,7 @@
 
 
 .App-header {
-	
+	z-index: 1;
 	background-color: #222;
 	height: 250px;
 	top: 0;

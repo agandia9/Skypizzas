@@ -59,6 +59,12 @@ form button{
 	border:0;
 }
 
+form button:hover{
+	-webkit-transition: background-color 800ms linear;
+    -ms-transition: background-color 800ms linear;
+    transition: background-color 800ms linear;
+	background-color: #555556;
+}
 form button:active{
 	background-color: #727272;
 	border:0;
@@ -73,11 +79,18 @@ a{
 	font-size: 25px;
 	text-decoration: none;
 	width: 100%;
+	color: #000;
 	background-color: #727272;
 	display: inline-block;
 	height: 50px;
 }
-
+a:hover{
+	color: #000;
+	-webkit-transition: background-color 800ms linear;
+    -ms-transition: background-color 800ms linear;
+    transition: background-color 800ms linear;
+	background-color: #555556;
+}
 a:active{
 	text-decoration: none;
 }
