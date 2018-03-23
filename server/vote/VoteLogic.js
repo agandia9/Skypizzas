@@ -3,9 +3,6 @@ const userLogic = new(require('../user/UserLogic'))
 const pizzasLogic = new(require('../pizzas/PizzasLogic'))
 const Pin = require('../admin/pin')
 
-const oldPizzas = {
-
-}
 
 class VoteLogic{
     listActualVotes(){

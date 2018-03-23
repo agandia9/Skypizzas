@@ -5,11 +5,6 @@
         "image":"http://www.dominospizza.es/images/Queso de cabra y espinacass.png"
     },
     {
-        "name":"Queso ibérico curado y jamón serrano",
-        "ingredients":"Salsa de tomate, queso 100% mozzarella, queso ibérico curado, jamón serrano, aceite de oliva virgen extra y tomillo seco.",
-        "image":"http://www.dominospizza.es/images/Queso iberico curado y jamon serranoo.png"
-    },
-    {
         "name":"Con parmesano y espárragos",
         "ingredients":"Crema fresca, queso 100% mozzarella, parmesano, espárragos, bacon, champiñón y pollo a la parrilla en nuestra masa original con aceitunas y aceite de oliva virgen extra.",
         "image":"http://www.dominospizza.es/images/Parmesano, esparragos i baconn.png"
@@ -33,6 +28,11 @@
         "name":"Cremozza al estilo Bourbon",
         "ingredients":"Base de crema fresca, queso 100% mozzarella, bacon, pollo a la parrilla, cebolla, salsa Bourbon (0% Alcohol).",
         "image":"http://www.dominospizza.es/images/cremozza_estilo_bourbon.png"
+    },
+    {
+        "name":"Queso de cabra y espinacas Pan",
+        "ingredients":"Crema fresca, queso 100% mozzarella, queso de cabra, espinacas y cebolla caramelizada.",
+        "image":"https://www.dominospizza.es/images/Queso de cabra y espinacas PAN.png"
     },
     {
         "name":"Cabramelizada",
