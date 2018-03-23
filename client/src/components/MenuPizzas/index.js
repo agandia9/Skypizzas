@@ -73,7 +73,6 @@ class MenuPizzas extends Component {
 						return name !== pizzaToDelete
 					})
 				})
-			
 	}
 
 	pushUpvotes = (e) => {
@@ -84,13 +83,14 @@ class MenuPizzas extends Component {
 		else{
 				swal({
 					title:'One step more, ur name?',
-						content: {
+					animation: false,
+					customClass: 'animated tada',
+					content: {
 						element: "input",
 						attributes: {
-						  placeholder: "Type your Github name ..."
+						placeholder: "Type your Github name ..."
 						}
-					},
-
+					}
 				}).then((value)=>{
 					this.setState({
 						name:value
@@ -98,8 +98,6 @@ class MenuPizzas extends Component {
 				}).then(()=>{
 					var obj = {name: this.state.name, vote1:this.state.yourSelection[0], vote2:this.state.yourSelection[1], vote3:this.state.yourSelection[2]}
 					var data = JSON.stringify(obj)
-					console.log(data)
-
 					fetch('https://hidden-peak-45393.herokuapp.com/votes',{
 						method: "post",
 						body: data,
@@ -127,10 +125,7 @@ class MenuPizzas extends Component {
 							yourSelection:[]
 						})
 					})
-				
-				
 			}
-
 	}
 
 	render() {
