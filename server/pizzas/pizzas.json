@@ -88,5 +88,20 @@
         "name":"Tony Pepperoni",
         "ingredients":"Salsa de tomate, extra de queso 100% mozzarella y doble de pepperoni.",
         "image":"http://www.dominospizza.es/images/tony_pepperoni.png"
+    },
+    {
+        "name": "Texas BBQ Crispy",
+        "ingredients": "Salsa barbacoa Texas, queso 100% Mozzarella, bacon crispy, bacon, pollo a la parrilla, ternera especiada, queso cheddar rallado sobre el borde y salsa barbacoa Texas por encima.",
+        "image": "http://www.dominospizza.es/images/pizza_texas.png"
+    },
+    {
+        "name": "Buffalo Chicken",
+        "ingredients": "Salsa barbacoa original, queso 100% mozzarella, pollo Buffalo con un toque picante, bacon crispy, cebolla caramelizada y queso cheddar rallado sobre el borde.",
+        "image": "http://www.dominospizza.es/images/pizza_buffalo.png"
+    },
+    {
+        "name": "Kansas pulled beef",
+        "ingredients": "http://www.dominospizza.es/images/cenitales_kansas.png",
+        "image": "Salsa barbacoa Kansas, queso 100% mozzarella, pulled beef, bacon, cebolla y queso cheddar rallado sobre el borde."
     }
 ]
