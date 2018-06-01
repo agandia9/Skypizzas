@@ -16,7 +16,6 @@ class TopVoted extends Component {
 		window.scrollTo(0, 0)
 		fetch('https://hidden-peak-45393.herokuapp.com/votes').then(res => res.json())
 		.then(res => {
-			//console.log(res)
 			const result = Object.keys(res.data).map(function(key) {
 			  return {name: key, quantity: res.data[key]};
 			}).sort((a,b)=>{
@@ -62,9 +61,7 @@ class TopVoted extends Component {
 				</div>
 				
 			</div>
-			
 				<Statistics />
-			
 		<Link to='/'>Home</Link>
 		</div>
 		);

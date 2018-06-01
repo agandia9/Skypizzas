@@ -61,9 +61,6 @@ class Statistics extends Component {
 		return(
 			<div className="statistic">
 				<h1>Historical Statistic</h1>
-				{
-					console.log(this.state.votes)
-				}
 				<div id="chart"></div>
 				<div id="chart2"></div>
 			

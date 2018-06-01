@@ -6,7 +6,6 @@ import PinPanel from './PinPanel'
 class AdminPlace extends Component{
 	constructor(){
 		super()
-
 		this.state={
 			correctPin: '',
 			showPanel: false,
@@ -38,7 +37,6 @@ class AdminPlace extends Component{
 	}
 	resetVotes = (e) => {
 		e.preventDefault()
-		//pasar el PIN (POST)
 		var pin = this.state.correctPin
 		var obj = {pin}
 		var data = JSON.stringify(obj)
@@ -46,8 +44,8 @@ class AdminPlace extends Component{
 			body: data,
 			method: 'post',
 			headers: {
-							'content-type': 'application/json'
-						}
+				'content-type': 'application/json'
+			}
 		}).then(res => res.json())
 		.then(res => {
 			if(res.status==='OK'){
@@ -71,8 +69,8 @@ class AdminPlace extends Component{
 			method:'post',
 			body: data,
 			headers: {
-							'content-type': 'application/json'
-						}
+				'content-type': 'application/json'
+			}
 		}).then((res)=>{
 			res.json()
 			swal('Users added properly','','success')

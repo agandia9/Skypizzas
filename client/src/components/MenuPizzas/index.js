@@ -53,7 +53,6 @@ class MenuPizzas extends Component {
 		}
 	}
 
-
 	vote = (e) =>{
 		if(this.state.yourSelection.length > 2){
 			return 'u focking idiot.'

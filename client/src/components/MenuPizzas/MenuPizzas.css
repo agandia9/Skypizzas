@@ -7,6 +7,8 @@
     min-height: 100vh;
 }
 .Submit-votes{
+	font-size: 30px;
+	height: 100px;
 	cursor: pointer;
 }
 .Pizzas-menu h3{
@@ -49,6 +51,7 @@ input{
 }
 
 form button{
+
 	margin-top: 10px;
 	background-color: #727272;
 	font-size: 25px;
@@ -60,9 +63,9 @@ form button{
 }
 
 form button:hover{
-	-webkit-transition: background-color 800ms linear;
-    -ms-transition: background-color 800ms linear;
-    transition: background-color 800ms linear;
+	-webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
 	background-color: #555556;
 }
 form button:active{
@@ -76,19 +79,20 @@ ul li{
 }
 
 a{
-	font-size: 25px;
+	height: 100px;
+	font-size: 30px;
 	text-decoration: none;
 	width: 100%;
 	color: #000;
 	background-color: #727272;
 	display: inline-block;
-	height: 50px;
+	text-align: center;
 }
 a:hover{
 	color: #000;
-	-webkit-transition: background-color 800ms linear;
-    -ms-transition: background-color 800ms linear;
-    transition: background-color 800ms linear;
+	-webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
 	background-color: #555556;
 }
 a:active{
